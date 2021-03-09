@@ -1,0 +1,19 @@
+version: '3'
+services:
+  geolocation-service:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    command: sh -c "./wait && ./api/api"
+    environment:
+      - WAIT_HOSTS=mongo:27017
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=2
+      - WAIT_HOST_CONNECT_TIMEOUT=5
+  mongo:
+    image: "mongo:4.4-bionic"
+    logging:
+      driver: none
+

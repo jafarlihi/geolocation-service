@@ -1,0 +1,15 @@
+{
+    "server": {
+        "httpPort": 8080,
+        "triggerImportSocket": "/tmp/geo.sock"
+    },
+    "mongo": {
+        "url": "mongodb://mongo:27017",
+        "database": "geolocation",
+        "collection": "location",
+        "dropOnUpdate": true
+    },
+    "importFile": {
+        "path": "./data_dump.csv"
+    }
+}
