@@ -37,7 +37,7 @@ ds, err := dataservice.NewDataService(dataservice.Settings{
 })
 ```
 Then you'll have two methods available to call on your `dataService` instance: `ImportData` and `FetchLocation`.
-- `FetchLocation` takes in a single string argument indicating the IP address to fetch the location information for. It returns an instance of `Location` struct, which is defined as:
+- `FetchLocation` takes in a single string argument indicating the IP address to fetch the location information for. It returns an instance of `Location` struct when an entry for the given IP address is found, error otherwise. `Location` struct is defined as:
 ```go
 type Location struct {
 	IPAddress    string  `bson:"ipAddress"`
