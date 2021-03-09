@@ -22,7 +22,7 @@ func main() {
 		MongoCollection: Config.Mongo.Collection,
 	}) // Create a new dataService instance
 	if err != nil {
-		Log.Errorf("Could not initialize the dataService, error: %v", err)
+		Log.Errorf("Could not initialize the dataService: %v", err)
 		os.Exit(1)
 	}
 
@@ -32,7 +32,7 @@ func main() {
 		Log.Info("Running initial data import")
 		importStatistics, err := ds.ImportData(Config.Mongo.DropOnUpdate) // Trigger the initial data import
 		if err != nil {
-			Log.Errorf("Could not complete the initial data import, error: %v", err)
+			Log.Errorf("Could not complete the initial data import: %v", err)
 			os.Exit(1)
 		}
 		Log.Infof("Initial data import complete: %+v", importStatistics)
