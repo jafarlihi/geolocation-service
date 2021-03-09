@@ -2,7 +2,7 @@ AWS instance: http://3.65.204.237:8080
 
 Example request: http://3.65.204.237:8080/location?ipAddress=200.106.141.15 -> Returns 200 and the location information
 
-Example request: http://3.65.204.237:8080/location?ipAddress=8.8.8.8 -> Returns 204 because the IP address is not in the database (if you are accessing it through the browser then you'll be redirected to `/location` which will show you an error that `ipAddress` is not provided)
+Example request: http://3.65.204.237:8080/location?ipAddress=8.8.8.8 -> Returns 204 because the IP address is not in the database
 
 # geolocation-service
 
