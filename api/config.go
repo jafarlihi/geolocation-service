@@ -34,7 +34,7 @@ var Config configuration
 func initConfig() {
 	configFile, err := os.Open("./config.json")
 	if err != nil {
-		Log.Error("Failed to open the config file, error: " + err.Error())
+		Log.Errorf("Failed to open the config file: %v", err)
 		os.Exit(1)
 	}
 	defer configFile.Close()
@@ -42,7 +42,7 @@ func initConfig() {
 	jsonParser := json.NewDecoder(configFile)
 	err = jsonParser.Decode(&Config)
 	if err != nil {
-		Log.Error("Failed to decode the config file, error: " + err.Error())
+		Log.Errorf("Failed to decode the config file: %v", err)
 		os.Exit(1)
 	}
 }
