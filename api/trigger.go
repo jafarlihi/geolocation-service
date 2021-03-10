@@ -28,7 +28,7 @@ func listenForTriggerSocketConnections(ds dataservice.IDataService) {
 		Log.Info("Running data import because a trigger connection was received")
 		importStatistics, err := ds.ImportData(Config.Mongo.DropOnUpdate)
 		if err != nil {
-			Log.Errorf("Could not complete the data import, error: %v", err)
+			Log.Errorf("Could not complete the data import: %v", err)
 			continue
 		}
 		Log.Infof("Data import complete: %+v", importStatistics)
