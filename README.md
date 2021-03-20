@@ -1,9 +1,3 @@
-AWS instance: http://3.65.204.237:8080
-
-Example request: http://3.65.204.237:8080/location?ipAddress=200.106.141.15 -> Returns 200 and the location information
-
-Example request: http://3.65.204.237:8080/location?ipAddress=8.8.8.8 -> Returns 204 because the IP address is not in the database
-
 # geolocation-service
 
 `geolocation-service` is made up of two parts: `dataservice` library and `api` application.
