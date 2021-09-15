@@ -14,7 +14,7 @@ Records are stored in MongoDB. An unique index is created on `ipAddress` field t
 2. Run `cd ./api && go build && ./api`
 
 ### Docker
-(Data import process is about a lot slower in Docker)
+(Data import process is a lot slower in Docker)
 1. Edit ./config.json
 2. Run `sudo docker-compose up`
 
